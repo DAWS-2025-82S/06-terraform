@@ -47,3 +47,11 @@ Terraform variables preference
 3. env var --> export TF_VAR_instance_type="t3.xlarge"
 4. default values
 5. user prompt */
+
+// By default terraform will load vars from *.auto.tfvars and terraform.tfvars files
+// If the file name  is different to load vars from different file name use -var-file=<filename> option
+// terraform plan -var-file=test.tfvars
+// terraform apply -var-file=test.tfvars
+
+// To pass multiple vars
+// terraform plan -var "instance_type=t3.large" -var "from_port=99"
